@@ -1,0 +1,30 @@
+{
+  "name": "privi-launchpad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.2.1",
+    "@openzeppelin/contracts": "^4.1.0",
+    "@truffle/hdwallet-provider": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "truffle": "^5.4.1"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.11",
+    "prettier": "^2.3.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.17",
+    "solhint": "^3.3.6",
+    "solhint-plugin-prettier": "0.0.5",
+    "truffle-plugin-verify": "^0.5.11"
+  },
+  "scripts": {
+    "solhint": "./node_modules/.bin/solhint contracts/*.sol",
+    "prettier:solidity": "./node_modules/.bin/prettier --write contracts/*.sol"
+  },
+  "author": "Eric Nordelo",
+  "license": "ISC"
+}

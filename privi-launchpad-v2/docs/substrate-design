@@ -1,0 +1,29 @@
+# Launchpool contract
+
+The launchpool contract may be used by projects looking for funding. It resembles an ICO, with the ability to purchase 
+options on the token after project completion.
+
+A fundraise goes through 3 states:
+
+### Fundraising rounds
+
+Users may purchase launch tokens directly. Every fundraising round, the price of the launchtokens increases by a given
+amount, ensuring that early investors obtain a better deal since they are taking an increased risk. The price of the 
+launch tokens can be configured by the fundraisers. Funds raised are sent directly to the founders' wallet. 
+
+### Launch
+
+After the rounds are completed, launch tokens are exchanged for newly minted app tokens, which are the actual tokens 
+associated with the project. Ownership of the app tokens is then transferred to the launched contract. 
+
+### Expiration
+
+After either a set amount of time, or when the fundraising time calls the expiration function, all ranging tokens are 
+exchanged for app tokens held by the contract. App tokens are minted to fund the contract rewards. After the transfer is 
+completed, ranging tokens are paused.
+
+## Taxation
+
+Substrate cannot charge a taxation on a specific account for all functionalities. We can however extend erc20 to add a 
+taxation parameter there. I think however, that it would be better to let the launched contract handle taxation, and 
+have the launchpool only distribute received funds over the investors, akin to how pods handle that.
